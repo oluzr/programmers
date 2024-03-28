@@ -7,5 +7,5 @@ function solution(numbers) {
             }
         }
     })
-    return answer.filter((e,i)=>answer.indexOf(e)===i).sort((a,b)=>a-b)
+    return [...new Set(answer)].sort((a,b)=>a-b)
 }
