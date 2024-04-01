@@ -1,6 +1,4 @@
 function solution(answers) {
-
-
     const man1 = [1,2,3,4,5]
     const man2 = [2,1,2,3,2,4,2,5]
     const man3 = [3,3,1,1,2,2,4,4,5,5]
@@ -17,6 +15,6 @@ function solution(answers) {
         2 : checkFun(man2),
         3 : checkFun(man3)
     }
-    return Object.keys(mans).filter((e)=>mans[e] === max).map((e)=>parseInt(e)).sort((a,b)=>a-b)
+    return Object.keys(mans).filter((e)=>mans[e] === max).map((e)=>parseInt(e))
     
 }
