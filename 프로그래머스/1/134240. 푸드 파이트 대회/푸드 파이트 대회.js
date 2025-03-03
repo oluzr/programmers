@@ -1,9 +1,12 @@
 function solution(food) {
-    let str = ''
+    let answer = [];
     food.forEach((e,i)=>{
-        if(i!==0){
-            str+=(i+'').repeat(parseInt(e/2))
+        if(i===0) return;
+        if(e%2===0){
+            answer=[...answer,...new Array(e/2).fill(i)]
+        }else{
+            answer=[...answer,...new Array((e-1)/2).fill(i)]
         }
     })
-    return str+'0'+[...str].reverse().join('')
+    return [...answer,0,...answer.reverse()].join('')
 }
